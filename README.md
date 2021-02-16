@@ -1,4 +1,4 @@
 # web-design-utilities
 
-**For svg
+**For waves svg
 https://getwaves.io/
