@@ -4,4 +4,4 @@
 https://getwaves.io/
 
 ### Scroll Animations
-1. [https://github.com/locomotivemtl/locomotive-scroll](locomotive-scroll)
+1. Locomotive Scroll [Github](https://github.com/locomotivemtl/locomotive-scroll) [Website](https://locomotivemtl.github.io/locomotive-scroll/)
