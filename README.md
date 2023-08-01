@@ -15,3 +15,7 @@
 1. Locomotive Scroll [Github](https://github.com/locomotivemtl/locomotive-scroll) [Web Link](https://locomotivemtl.github.io/locomotive-scroll/)
 2. ScrollReveal [Web Link](https://scrollrevealjs.org/)
 3. Wow [Web Link](https://wowjs.uk/)
+
+### Plugins
+1. Gridstack [Link](https://gridstackjs.com/)
+2. Nested Menu [Link](https://github.com/moemoe89/simple-management-menu-php-mysql-jquery)
