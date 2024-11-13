@@ -10,6 +10,7 @@
 2. Cool Backgrounds [Web Link](https://coolbackgrounds.io/)
 3. Softr [Web Link](https://www.softr.io/tools/svg-wave-generator)
 4. Bgjar [Web Link](https://bgjar.com/)
+5. haikei [Web Link](https://app.haikei.app/)
 
 ### Scroll Animations
 1. Locomotive Scroll [Github](https://github.com/locomotivemtl/locomotive-scroll) [Web Link](https://locomotivemtl.github.io/locomotive-scroll/)
