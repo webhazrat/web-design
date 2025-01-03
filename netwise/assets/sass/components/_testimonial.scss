@@ -1,0 +1,65 @@
+/**
+================================================
+15. Testimonial CSS
+================================================
+**/
+.testimonial-section {
+  background: var(--nt-bg);
+  .testimonial-cta {
+    .cta-icon {
+      background: var(--nt-bg-tertiary);
+      color: var(--nt-bg-white);
+    }
+    .number {
+      font-size: 22px;
+      font-weight: 700;
+    }
+    &:hover {
+      .number {
+        color: var(--nt-bg-tertiary);
+      }
+    }
+  }
+  .testimonial-items {
+    background: var(--nt-bg-white);
+    border-radius: 30px;
+    .testimonial-item {
+      padding: 40px;
+      .rating {
+        i {
+          color: var(--nt-bg-secondary);
+          &.not-rate {
+            color: #cccccc;
+          }
+        }
+      }
+      .message {
+        font-family: var(--nt-font-title);
+        font-size: 21px;
+        line-height: 31px;
+        color: #49515b;
+        margin-bottom: 80px;
+      }
+      .testimonial-bottom {
+        i {
+          font-size: 64px;
+          color: var(--nt-bg-primary);
+        }
+        .testimonial-author {
+          .name {
+            font-size: 22px;
+            line-height: 26px;
+            margin-bottom: 5px;
+            font-weight: 700;
+            color: var(--nt-bg-black);
+          }
+          img {
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+          }
+        }
+      }
+    }
+  }
+}

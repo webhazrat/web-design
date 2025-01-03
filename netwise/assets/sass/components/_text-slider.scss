@@ -1,0 +1,44 @@
+/**
+================================================
+16. Text Slider CSS
+================================================
+**/
+.text-slider-section {
+  padding: 30px 0;
+  background-color: var(--nt-bg);
+  border-top: 2px solid var(--nt-bg-tertiary);
+  border-bottom: 2px solid var(--nt-bg-tertiary);
+  overflow: hidden;
+  .text-slider-items {
+    white-space: nowrap;
+    animation: slideInfinite 18s linear infinite;
+    .slider-item {
+      img {
+        width: 65px;
+        height: 65px;
+      }
+      .title {
+        font-size: 60px;
+        line-height: 68px;
+        font-weight: 300;
+        color: var(--nt-bg-black);
+      }
+      &:nth-child(even) {
+        .title {
+          opacity: 0.7;
+        }
+      }
+    }
+    @keyframes slideInfinite {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-100% - 2.6rem));
+      }
+    }
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+}

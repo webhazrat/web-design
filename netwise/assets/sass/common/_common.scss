@@ -1,0 +1,166 @@
+/**
+Theme Name: Netwise - IT Solutions & Technology HTML Template
+Support: mdhazrat445891@gmail.com
+Description: Netwise - IT Solutions & Technology HTML Template
+Version: 1.0
+**/
+
+/**
+================================================
+CSS Index
+================================================
+
+============================
+*** Template Components ***
+============================
+01. Google Fonts
+02. Variable CSS
+03. Common CSS
+04. Header CSS
+05. Banner CSS
+06. Button CSS
+07. Features CSS
+08. Icon Box CSS
+09. Services CSS
+10. Counters CSS
+11. Team CSS
+12. Contact CSS
+13. CTA CSS
+14. Form CSS
+15. Testimonial CSS
+16. Text Slider CSS
+
+============================
+*** Template Pages ***
+============================
+**/
+
+/**
+================================================
+01. Google Fonts
+================================================
+**/
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+// font-family: "Space Grotesk", serif;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+// font-family: "Inter", serif;
+
+/**
+================================================
+02. Variable CSS
+================================================
+**/
+:root {
+  --nt-bg-primary: #0044eb;
+  --nt-bg-secondary: #ffbe16;
+  --nt-bg-tertiary: #47b16a;
+  --nt-bg-black: #222222;
+  --nt-bg-white: #ffffff;
+  --nt-bg: #f1f6fc;
+  --nt-border-color: #cccccc;
+  --nt-font-title: "Space Grotesk", serif;
+  --nt-font-body: "Inter", serif;
+  --nt-font-size-body: 18px;
+  --nt-font-weight-body: 400;
+  --nt-line-height: 160%;
+  --nt-font-color-title: #020842;
+  --nt-font-color-body: #49515b;
+  --nt-transition: all linear 0.3s;
+  --nt-shadow: 0px 10px 30px 0px rgba(137, 139, 142, 0.2);
+  --nt-shadow-sm: 0 2px 20px rgba(25, 25, 25, 0.1);
+  --nt-section-padding: 120px;
+}
+
+/**
+================================================
+03. Common CSS
+================================================
+**/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: var(--nt-font-title);
+}
+a,
+button {
+  display: inline-block;
+  text-decoration: none;
+  transition: var(--nt-transition);
+}
+.shadow-none {
+  box-shadow: none !important;
+}
+ol,
+ul {
+  padding: 0;
+  margin: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+  color: var(--nt-font-color-body);
+}
+
+body {
+  font-family: var(--nt-font-body);
+  font-size: var(--nt-font-size-body);
+  font-weight: var(--nt-font-weight-body);
+  color: var(--nt-bg-black);
+  line-height: var(--nt-line-height);
+  overflow-x: hidden;
+}
+.mt-80 {
+  margin-top: 80px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.py-80 {
+  padding: 80px 0;
+}
+.section-spacing {
+  padding: var(--nt-section-padding) 0;
+}
+
+.section-title {
+  .title {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 70px;
+  }
+  .sub-title {
+    font-size: 16px;
+    letter-spacing: 2.5px;
+    color: var(--nt-bg-tertiary);
+    position: relative;
+    padding-right: 10px;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 2px;
+      width: 30px;
+      background: var(--nt-bg-primary);
+    }
+    &::after {
+      left: calc(100% + 30px);
+      height: 12px;
+      width: 12px;
+      border-radius: 100%;
+    }
+  }
+}

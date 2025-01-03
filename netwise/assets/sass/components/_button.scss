@@ -1,0 +1,87 @@
+/**
+================================================
+06. Button CSS
+================================================
+**/
+.theme-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: var(--nt-font-size-body);
+  font-family: var(--nt-font-title);
+  font-weight: bold;
+  line-height: 30px;
+  position: relative;
+  z-index: 1;
+  transition: var(--nt-transition);
+  border: 0;
+  .icon {
+    margin-left: 10px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--nt-bg-black);
+    border-radius: 50px;
+    z-index: -1;
+    transition: var(--nt-transition);
+    transform: scale(0);
+  }
+  &:hover {
+    &::before {
+      transform: scale(1);
+    }
+  }
+}
+.btn-primary {
+  background: var(--nt-bg-primary);
+  color: var(--nt-bg-white);
+}
+.btn-tertiary {
+  background: var(--nt-bg-tertiary);
+  color: var(--nt-bg-white);
+}
+.btn-outline-primary {
+  border: 1px solid var(--nt-bg-primary);
+  color: var(--nt-bg-black);
+  .icon svg path {
+    fill: var(--nt-bg-black);
+    transition: var(--nt-transition);
+  }
+  &::before {
+    background: var(--nt-bg-primary);
+  }
+  &:hover {
+    color: var(--nt-bg-white);
+    .icon svg path {
+      fill: var(--nt-bg-white);
+    }
+  }
+}
+
+.play-btn {
+  color: var(--nt-font-color-body);
+  .icon {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border-radius: 100%;
+    background: var(--nt-bg-secondary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    color: var(--nt-bg-tertiary);
+    transition: var(--nt-transition);
+  }
+  &:hover {
+    .icon {
+      background: var(--nt-bg-black);
+      color: var(--nt-bg-white);
+    }
+  }
+}

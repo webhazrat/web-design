@@ -1,0 +1,79 @@
+/**
+================================================
+11. Team CSS
+================================================
+**/
+.team-section {
+  background: var(--nt-bg);
+  .team-items {
+    .team-item {
+      border: 1px solid var(--nt-border-color);
+      border-radius: 20px;
+      padding: 50px 40px;
+      transition: var(--nt-transition);
+      .team-name-info {
+        .name {
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 38px;
+          margin-bottom: 10px;
+        }
+      }
+      .team-socials {
+        position: relative;
+        z-index: 10;
+        li {
+          a {
+            width: 35px;
+            height: 35px;
+            border: 1px solid var(--nt-border-color);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: var(--nt-bg-black);
+            transition: var(--nt-transition);
+            &:hover {
+              background: var(--nt-bg-tertiary);
+              color: var(--nt-bg-white);
+              border-color: var(--nt-bg-tertiary);
+            }
+          }
+        }
+      }
+      .hover-image {
+        max-width: 260px;
+        top: 50%;
+        right: 78px;
+        transform: translateY(-50%) rotate(-15deg);
+        visibility: hidden;
+        opacity: 0;
+        z-index: 9;
+        transition: var(--nt-transition);
+        img {
+          border-radius: 20px;
+        }
+      }
+      &.active {
+        background: var(--nt-bg-white);
+        .hover-image {
+          visibility: visible;
+          opacity: 1;
+        }
+        .team-socials {
+          li {
+            a {
+              background: var(--nt-bg-white);
+              &:hover {
+                background: var(--nt-bg-tertiary);
+                color: var(--nt-bg-white);
+                border-color: var(--nt-bg-tertiary);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

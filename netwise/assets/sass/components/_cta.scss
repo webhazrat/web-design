@@ -1,0 +1,41 @@
+/**
+================================================
+13. CTA CSS
+================================================
+**/
+.cta-section {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  background-color: var(--nt-bg-secondary);
+  .cta-info {
+    img {
+      width: 56px;
+    }
+    .title {
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 500;
+      max-width: 300px;
+    }
+  }
+  .cta-form {
+    .group-form-field {
+      flex-grow: 1;
+      .form-control {
+        border: 1px solid var(--nt-bg-black);
+        background: transparent;
+        height: 60px;
+      }
+      i {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 20px;
+        font-size: 16px;
+      }
+    }
+  }
+}

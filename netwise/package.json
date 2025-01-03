@@ -1,0 +1,13 @@
+{
+  "name": "netwise",
+  "version": "1.0.0",
+  "description": "IT Solutions & Technology HTML Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass --watch assets/sass/style.scss assets/css/style.css",
+    "compile": "sass assets/sass/style.scss assets/css/style.css"
+  },
+  "author": "Md Hazrat Ali",
+  "license": "ISC"
+}

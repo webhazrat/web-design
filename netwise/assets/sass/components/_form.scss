@@ -1,0 +1,26 @@
+/**
+================================================
+14. Form CSS
+================================================
+**/
+label {
+  font-family: var(--nt-font-title);
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 10px;
+  font-size: var(--nt-font-size-body);
+}
+.form-control,
+.form-select {
+  padding: 15px 20px;
+  height: 130px;
+  border: 1px solid var(--nt-border-color);
+  border-radius: 33px;
+  font-size: var(--nt-font-size-body);
+  &:not(textarea) {
+    height: 68px;
+  }
+  &:focus {
+    border-color: var(--nt-bg-tertiary);
+  }
+}

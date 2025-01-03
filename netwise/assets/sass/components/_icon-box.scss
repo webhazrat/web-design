@@ -1,0 +1,26 @@
+/**
+================================================
+08. Icon Box CSS
+================================================
+**/
+.icon-primary {
+  background: var(--nt-bg-primary);
+}
+.icon-secondary {
+  background: var(--nt-bg-secondary);
+}
+.icon-tertiary {
+  background: var(--nt-bg-tertiary);
+}
+.icon-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-box.icon-white img {
+  filter: brightness(0) invert(1);
+}

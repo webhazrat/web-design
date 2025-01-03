@@ -1,0 +1,900 @@
+/**
+Theme Name: Netwise - IT Solutions & Technology HTML Template
+Support: mdhazrat445891@gmail.com
+Description: Netwise - IT Solutions & Technology HTML Template
+Version: 1.0
+**/
+/**
+================================================
+CSS Index
+================================================
+
+============================
+*** Template Components ***
+============================
+01. Google Fonts
+02. Variable CSS
+03. Common CSS
+04. Header CSS
+05. Banner CSS
+06. Button CSS
+07. Features CSS
+08. Icon Box CSS
+09. Services CSS
+10. Counters CSS
+11. Team CSS
+12. Contact CSS
+13. CTA CSS
+14. Form CSS
+15. Testimonial CSS
+16. Text Slider CSS
+
+============================
+*** Template Pages ***
+============================
+**/
+/**
+================================================
+01. Google Fonts
+================================================
+**/
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+/**
+================================================
+02. Variable CSS
+================================================
+**/
+:root {
+  --nt-bg-primary: #0044eb;
+  --nt-bg-secondary: #ffbe16;
+  --nt-bg-tertiary: #47b16a;
+  --nt-bg-black: #222222;
+  --nt-bg-white: #ffffff;
+  --nt-bg: #f1f6fc;
+  --nt-border-color: #cccccc;
+  --nt-font-title: "Space Grotesk", serif;
+  --nt-font-body: "Inter", serif;
+  --nt-font-size-body: 18px;
+  --nt-font-weight-body: 400;
+  --nt-line-height: 160%;
+  --nt-font-color-title: #020842;
+  --nt-font-color-body: #49515b;
+  --nt-transition: all linear 0.3s;
+  --nt-shadow: 0px 10px 30px 0px rgba(137, 139, 142, 0.2);
+  --nt-shadow-sm: 0 2px 20px rgba(25, 25, 25, 0.1);
+  --nt-section-padding: 120px;
+}
+
+/**
+================================================
+03. Common CSS
+================================================
+**/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: var(--nt-font-title);
+}
+
+a,
+button {
+  display: inline-block;
+  text-decoration: none;
+  transition: var(--nt-transition);
+}
+
+.shadow-none {
+  box-shadow: none !important;
+}
+
+ol,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  color: var(--nt-font-color-body);
+}
+
+body {
+  font-family: var(--nt-font-body);
+  font-size: var(--nt-font-size-body);
+  font-weight: var(--nt-font-weight-body);
+  color: var(--nt-bg-black);
+  line-height: var(--nt-line-height);
+  overflow-x: hidden;
+}
+
+.mt-80 {
+  margin-top: 80px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.py-80 {
+  padding: 80px 0;
+}
+
+.section-spacing {
+  padding: var(--nt-section-padding) 0;
+}
+
+.section-title .title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 70px;
+}
+.section-title .sub-title {
+  font-size: 16px;
+  letter-spacing: 2.5px;
+  color: var(--nt-bg-tertiary);
+  position: relative;
+  padding-right: 10px;
+}
+.section-title .sub-title::before, .section-title .sub-title::after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 30px;
+  background: var(--nt-bg-primary);
+}
+.section-title .sub-title::after {
+  left: calc(100% + 30px);
+  height: 12px;
+  width: 12px;
+  border-radius: 100%;
+}
+
+/**
+================================================
+04. Header CSS
+================================================
+**/
+.call-to-action {
+  color: var(--nt-font-color-body);
+}
+.call-to-action span {
+  font-size: 18px;
+  height: 55px;
+  width: 55px;
+  background: var(--nt-bg-white);
+  border-radius: 100%;
+  color: var(--nt-bg-primary);
+  transition: var(--nt-transition);
+}
+.call-to-action .call-to-action-info p {
+  font-family: var(--nt-font-title);
+}
+.call-to-action .call-to-action-info h5 {
+  font-size: var(--nt-font-size-body);
+  font-weight: 700;
+  color: var(--nt-font-color-title);
+  transition: var(--nt-transition);
+}
+.call-to-action:hover span {
+  background: var(--nt-bg-primary);
+  color: var(--nt-bg-white);
+}
+.call-to-action:hover .call-to-action-info h5 {
+  color: var(--nt-bg-primary);
+}
+
+.header-section {
+  position: fixed;
+  top: 20px;
+  z-index: 999;
+  width: 100%;
+  transition: var(--nt-transition);
+}
+.header-section.sticky-menu {
+  background: var(--nt-bg-white);
+  top: 0;
+  animation: 400ms ease-in-out 0s normal none 1 running fadeInDown;
+  box-shadow: var(--nt-shadow-sm);
+}
+.header-section.sticky-menu .navbar {
+  background: var(--nt-bg-white);
+  border-radius: 0;
+}
+.header-section.sticky-menu .call-to-action span {
+  background: var(--nt-bg);
+}
+.header-section .navbar-brand img {
+  height: 58px;
+  width: auto;
+}
+.header-section .nav-item .nav-link {
+  font-family: var(--nt-font-title);
+  font-size: var(--nt-font-size-body);
+  color: var(--nt-font-color-body);
+  padding: 0;
+  font-weight: 500;
+  color: var(--nt-font-color-title);
+}
+.header-section .nav-item .nav-link:hover {
+  color: var(--nt-bg-primary);
+}
+.header-section .nav-item .nav-link i {
+  font-size: 10px;
+}
+.header-section .nav-item .dropdown-menu {
+  border: 0;
+  border-radius: 0;
+}
+.header-section .nav-item .dropdown-menu li a {
+  background: transparent;
+  padding: 8px 16px;
+  transition: var(--nt-transition);
+  font-family: var(--nt-font-title);
+  font-size: var(--nt-font-size-body);
+  font-weight: 500;
+}
+.header-section .navbar {
+  background-color: var(--nt-bg);
+  padding: 0 50px;
+  border-radius: 80px;
+}
+@media (max-width: 1399px) {
+  .header-section .navbar {
+    padding: 0 35px;
+  }
+}
+@media (max-width: 1199px) {
+  .header-section .navbar {
+    padding: 6px 30px;
+  }
+}
+.header-section .navbar .hamburger {
+  height: 40px;
+  width: 40px;
+  border: 1px solid var(--nt-bg-black);
+  border-radius: 100%;
+  background: transparent;
+}
+.header-section .navbar .hamburger:hover {
+  background: var(--nt-bg-primary);
+  color: var(--nt-bg-white);
+  border-color: var(--nt-bg-primary);
+}
+.header-section .navbar .navbar-nav {
+  gap: 25px;
+}
+@media (max-width: 1399px) {
+  .header-section .navbar .navbar-nav {
+    gap: 20px;
+  }
+}
+.header-section .navbar .navbar-nav .nav-item .nav-link {
+  line-height: 94px;
+}
+.header-section .navbar .navbar-nav .nav-item .dropdown-menu {
+  width: 220px;
+  top: 100%;
+  background-color: var(--nt-bg-white);
+  box-shadow: var(--nt-shadow);
+  display: block;
+  border-radius: 0;
+  transition: var(--nt-transition);
+  margin-top: 20px;
+  visibility: hidden;
+  opacity: 0;
+}
+.header-section .navbar .navbar-nav .nav-item .dropdown-menu li a:hover {
+  background: var(--nt-bg-primary);
+  color: var(--nt-bg-white);
+}
+.header-section .navbar .navbar-nav .nav-item:hover .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 0;
+}
+
+/*Mobile navigation CSS start*/
+.mobile-navigation {
+  max-width: 300px;
+}
+.mobile-navigation .navbar-nav .nav-item .nav-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.mobile-navigation .navbar-nav .nav-item .nav-link i {
+  transition: var(--nt-transition);
+}
+.mobile-navigation .navbar-nav .nav-item .nav-link i.transform {
+  transform: rotate(-180deg);
+}
+.mobile-navigation .navbar-nav .nav-item .dropdown-menu li a:hover {
+  color: var(--nt-bg-primary);
+}
+.mobile-navigation .call-to-action {
+  margin-top: 30px;
+}
+.mobile-navigation .call-to-action span {
+  background: var(--nt-bg);
+}
+
+/**
+================================================
+05. Banner CSS
+================================================
+**/
+.banner-section {
+  padding: 120px 0 20px 0;
+  background-repeat: no-repeat;
+  background-position: left center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.banner-section::before {
+  content: "";
+  position: absolute;
+  right: -200px;
+  bottom: -200px;
+  width: 400px;
+  height: 400px;
+  border-radius: 100%;
+  background: var(--nt-bg-secondary);
+  filter: blur(152px);
+  z-index: -1;
+}
+.banner-section .banner-text .banner-title {
+  font-size: 74px;
+  line-height: 84px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.banner-section .banner-text .banner-btn {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/**
+================================================
+06. Button CSS
+================================================
+**/
+.theme-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: var(--nt-font-size-body);
+  font-family: var(--nt-font-title);
+  font-weight: bold;
+  line-height: 30px;
+  position: relative;
+  z-index: 1;
+  transition: var(--nt-transition);
+  border: 0;
+}
+.theme-btn .icon {
+  margin-left: 10px;
+}
+.theme-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--nt-bg-black);
+  border-radius: 50px;
+  z-index: -1;
+  transition: var(--nt-transition);
+  transform: scale(0);
+}
+.theme-btn:hover::before {
+  transform: scale(1);
+}
+
+.btn-primary {
+  background: var(--nt-bg-primary);
+  color: var(--nt-bg-white);
+}
+
+.btn-tertiary {
+  background: var(--nt-bg-tertiary);
+  color: var(--nt-bg-white);
+}
+
+.btn-outline-primary {
+  border: 1px solid var(--nt-bg-primary);
+  color: var(--nt-bg-black);
+}
+.btn-outline-primary .icon svg path {
+  fill: var(--nt-bg-black);
+  transition: var(--nt-transition);
+}
+.btn-outline-primary::before {
+  background: var(--nt-bg-primary);
+}
+.btn-outline-primary:hover {
+  color: var(--nt-bg-white);
+}
+.btn-outline-primary:hover .icon svg path {
+  fill: var(--nt-bg-white);
+}
+
+.play-btn {
+  color: var(--nt-font-color-body);
+}
+.play-btn .icon {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  border-radius: 100%;
+  background: var(--nt-bg-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+  color: var(--nt-bg-tertiary);
+  transition: var(--nt-transition);
+}
+.play-btn:hover .icon {
+  background: var(--nt-bg-black);
+  color: var(--nt-bg-white);
+}
+
+/**
+================================================
+07. Features CSS
+================================================
+**/
+.features-section {
+  background: var(--nt-bg);
+}
+.features-section .features-images {
+  z-index: 1;
+}
+.features-section .features-images .feature-img {
+  max-width: 500px;
+}
+.features-section .features-images .feature-img-absolute {
+  max-width: 330px;
+  border: 16px solid var(--nt-bg-white);
+  border-radius: 32px;
+  bottom: -30px;
+  right: 0;
+  background: var(--nt-bg-white);
+}
+.features-section .features-images::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  height: 230px;
+  border-radius: 20px;
+  background: var(--nt-bg-tertiary);
+  z-index: -1;
+}
+.features-section .features-text {
+  padding: 0 40px;
+}
+.features-section .features-items {
+  gap: 30px;
+}
+.features-section .features-items .feature-item {
+  gap: 30px;
+}
+.features-section .features-items .feature-item .feature-info .feature-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/**
+================================================
+08. Icon Box CSS
+================================================
+**/
+.icon-primary {
+  background: var(--nt-bg-primary);
+}
+
+.icon-secondary {
+  background: var(--nt-bg-secondary);
+}
+
+.icon-tertiary {
+  background: var(--nt-bg-tertiary);
+}
+
+.icon-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box.icon-white img {
+  filter: brightness(0) invert(1);
+}
+
+/**
+================================================
+09. Services CSS
+================================================
+**/
+.services-section {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.services-section .service-item {
+  border: 1px solid var(--nt-border-color);
+  border-radius: 20px;
+  margin: 15px;
+  padding: 40px;
+  transition: var(--nt-transition);
+  background: var(--nt-bg-white);
+}
+.services-section .service-item .icon-box {
+  margin-bottom: 60px;
+}
+.services-section .service-item .service-title {
+  margin-bottom: 20px;
+  color: var(--nt-bg-black);
+}
+.services-section .service-item:hover {
+  border-color: var(--nt-bg-black);
+}
+.services-section .arrow {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: -120px;
+  right: 15px;
+  border: 4px solid var(--nt-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 26px;
+  background-color: var(--nt-bg-white);
+  transition: var(--nt-transition);
+}
+.services-section .arrow:hover {
+  border-color: var(--nt-bg-tertiary);
+  color: var(--nt-bg-tertiary);
+}
+.services-section .arrow-prev {
+  right: 90px;
+}
+
+/**
+================================================
+10. Counters CSS
+================================================
+**/
+.counters-section {
+  background: var(--nt-bg);
+}
+.counters-section .counter-items {
+  margin-top: 60px;
+}
+.counters-section .counter-items .counter-item {
+  padding: 40px 20px;
+  background: var(--nt-bg-white);
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: var(--nt-transition);
+}
+.counters-section .counter-items .counter-item .number {
+  font-size: 60px;
+  line-height: 68px;
+  color: var(--nt-bg-black);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.counters-section .counter-items .counter-item:hover {
+  border-color: var(--nt-bg-tertiary);
+}
+.counters-section .counters-bg img {
+  border-radius: 20px;
+}
+.counters-section .odometer.odometer-auto-theme,
+.counters-section .odometer.odometer-theme-default {
+  font-family: var(--nt-font-title) !important;
+}
+
+/**
+================================================
+11. Team CSS
+================================================
+**/
+.team-section {
+  background: var(--nt-bg);
+}
+.team-section .team-items .team-item {
+  border: 1px solid var(--nt-border-color);
+  border-radius: 20px;
+  padding: 50px 40px;
+  transition: var(--nt-transition);
+}
+.team-section .team-items .team-item .team-name-info .name {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 38px;
+  margin-bottom: 10px;
+}
+.team-section .team-items .team-item .team-socials {
+  position: relative;
+  z-index: 10;
+}
+.team-section .team-items .team-item .team-socials li a {
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--nt-border-color);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--nt-bg-black);
+  transition: var(--nt-transition);
+}
+.team-section .team-items .team-item .team-socials li a:hover {
+  background: var(--nt-bg-tertiary);
+  color: var(--nt-bg-white);
+  border-color: var(--nt-bg-tertiary);
+}
+.team-section .team-items .team-item .hover-image {
+  max-width: 260px;
+  top: 50%;
+  right: 78px;
+  transform: translateY(-50%) rotate(-15deg);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 9;
+  transition: var(--nt-transition);
+}
+.team-section .team-items .team-item .hover-image img {
+  border-radius: 20px;
+}
+.team-section .team-items .team-item.active {
+  background: var(--nt-bg-white);
+}
+.team-section .team-items .team-item.active .hover-image {
+  visibility: visible;
+  opacity: 1;
+}
+.team-section .team-items .team-item.active .team-socials li a {
+  background: var(--nt-bg-white);
+}
+.team-section .team-items .team-item.active .team-socials li a:hover {
+  background: var(--nt-bg-tertiary);
+  color: var(--nt-bg-white);
+  border-color: var(--nt-bg-tertiary);
+}
+
+/**
+================================================
+14. Form CSS
+================================================
+**/
+label {
+  font-family: var(--nt-font-title);
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 10px;
+  font-size: var(--nt-font-size-body);
+}
+
+.form-control,
+.form-select {
+  padding: 15px 20px;
+  height: 130px;
+  border: 1px solid var(--nt-border-color);
+  border-radius: 33px;
+  font-size: var(--nt-font-size-body);
+}
+.form-control:not(textarea),
+.form-select:not(textarea) {
+  height: 68px;
+}
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--nt-bg-tertiary);
+}
+
+/**
+================================================
+12. Contact CSS
+================================================
+**/
+.contact-section {
+  background: var(--nt-bg);
+}
+.contact-section .contact-info-area {
+  z-index: 1;
+}
+.contact-section .contact-info-area::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: calc(100% + (100vw - 1296px) / 2);
+  top: 0;
+  right: 0;
+  background: var(--nt-bg-white);
+  z-index: -1;
+}
+.contact-section .contact-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: calc(100% + var(--nt-section-padding));
+  width: calc(100% + (100vw - 1296px) / 2);
+}
+.contact-section .contact-bg img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px 0 0 0;
+}
+
+/**
+================================================
+13. CTA CSS
+================================================
+**/
+.cta-section {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  background-color: var(--nt-bg-secondary);
+}
+.cta-section .cta-info img {
+  width: 56px;
+}
+.cta-section .cta-info .title {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 500;
+  max-width: 300px;
+}
+.cta-section .cta-form .group-form-field {
+  flex-grow: 1;
+}
+.cta-section .cta-form .group-form-field .form-control {
+  border: 1px solid var(--nt-bg-black);
+  background: transparent;
+  height: 60px;
+}
+.cta-section .cta-form .group-form-field i {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 16px;
+}
+
+/**
+================================================
+15. Testimonial CSS
+================================================
+**/
+.testimonial-section {
+  background: var(--nt-bg);
+}
+.testimonial-section .testimonial-cta .cta-icon {
+  background: var(--nt-bg-tertiary);
+  color: var(--nt-bg-white);
+}
+.testimonial-section .testimonial-cta .number {
+  font-size: 22px;
+  font-weight: 700;
+}
+.testimonial-section .testimonial-cta:hover .number {
+  color: var(--nt-bg-tertiary);
+}
+.testimonial-section .testimonial-items {
+  background: var(--nt-bg-white);
+  border-radius: 30px;
+}
+.testimonial-section .testimonial-items .testimonial-item {
+  padding: 40px;
+}
+.testimonial-section .testimonial-items .testimonial-item .rating i {
+  color: var(--nt-bg-secondary);
+}
+.testimonial-section .testimonial-items .testimonial-item .rating i.not-rate {
+  color: #cccccc;
+}
+.testimonial-section .testimonial-items .testimonial-item .message {
+  font-family: var(--nt-font-title);
+  font-size: 21px;
+  line-height: 31px;
+  color: #49515b;
+  margin-bottom: 80px;
+}
+.testimonial-section .testimonial-items .testimonial-item .testimonial-bottom i {
+  font-size: 64px;
+  color: var(--nt-bg-primary);
+}
+.testimonial-section .testimonial-items .testimonial-item .testimonial-bottom .testimonial-author .name {
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  color: var(--nt-bg-black);
+}
+.testimonial-section .testimonial-items .testimonial-item .testimonial-bottom .testimonial-author img {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+}
+
+/**
+================================================
+16. Text Slider CSS
+================================================
+**/
+.text-slider-section {
+  padding: 30px 0;
+  background-color: var(--nt-bg);
+  border-top: 2px solid var(--nt-bg-tertiary);
+  border-bottom: 2px solid var(--nt-bg-tertiary);
+  overflow: hidden;
+}
+.text-slider-section .text-slider-items {
+  white-space: nowrap;
+  animation: slideInfinite 18s linear infinite;
+}
+.text-slider-section .text-slider-items .slider-item img {
+  width: 65px;
+  height: 65px;
+}
+.text-slider-section .text-slider-items .slider-item .title {
+  font-size: 60px;
+  line-height: 68px;
+  font-weight: 300;
+  color: var(--nt-bg-black);
+}
+.text-slider-section .text-slider-items .slider-item:nth-child(even) .title {
+  opacity: 0.7;
+}
+@keyframes slideInfinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 2.6rem));
+  }
+}
+.text-slider-section .text-slider-items:hover {
+  animation-play-state: paused;
+}
+
+/*# sourceMappingURL=style.css.map */

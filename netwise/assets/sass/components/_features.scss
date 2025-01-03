@@ -1,0 +1,48 @@
+/**
+================================================
+07. Features CSS
+================================================
+**/
+.features-section {
+  background: var(--nt-bg);
+  .features-images {
+    z-index: 1;
+    .feature-img {
+      max-width: 500px;
+    }
+    .feature-img-absolute {
+      max-width: 330px;
+      border: 16px solid var(--nt-bg-white);
+      border-radius: 32px;
+      bottom: -30px;
+      right: 0;
+      background: var(--nt-bg-white);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 400px;
+      height: 230px;
+      border-radius: 20px;
+      background: var(--nt-bg-tertiary);
+      z-index: -1;
+    }
+  }
+  .features-text {
+    padding: 0 40px;
+  }
+  .features-items {
+    gap: 30px;
+    .feature-item {
+      gap: 30px;
+      .feature-info {
+        .feature-title {
+          font-size: 22px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

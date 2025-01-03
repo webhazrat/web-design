@@ -1,0 +1,51 @@
+/**
+================================================
+09. Services CSS
+================================================
+**/
+.services-section {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .service-item {
+    border: 1px solid var(--nt-border-color);
+    border-radius: 20px;
+    margin: 15px;
+    padding: 40px;
+    transition: var(--nt-transition);
+    background: var(--nt-bg-white);
+    .icon-box {
+      margin-bottom: 60px;
+    }
+    .service-title {
+      margin-bottom: 20px;
+      color: var(--nt-bg-black);
+    }
+    &:hover {
+      border-color: var(--nt-bg-black);
+    }
+  }
+  .arrow {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -120px;
+    right: 15px;
+    border: 4px solid var(--nt-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 26px;
+    background-color: var(--nt-bg-white);
+    transition: var(--nt-transition);
+    &:hover {
+      border-color: var(--nt-bg-tertiary);
+      color: var(--nt-bg-tertiary);
+    }
+  }
+  .arrow-prev {
+    right: 90px;
+  }
+}

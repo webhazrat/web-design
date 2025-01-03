@@ -1,0 +1,36 @@
+/**
+================================================
+10. Counters CSS
+================================================
+**/
+.counters-section {
+  background: var(--nt-bg);
+  .counter-items {
+    margin-top: 60px;
+    .counter-item {
+      padding: 40px 20px;
+      background: var(--nt-bg-white);
+      border-radius: 20px;
+      text-align: center;
+      border: 1px solid transparent;
+      transition: var(--nt-transition);
+      .number {
+        font-size: 60px;
+        line-height: 68px;
+        color: var(--nt-bg-black);
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+      &:hover {
+        border-color: var(--nt-bg-tertiary);
+      }
+    }
+  }
+  .counters-bg img {
+    border-radius: 20px;
+  }
+  .odometer.odometer-auto-theme,
+  .odometer.odometer-theme-default {
+    font-family: var(--nt-font-title) !important;
+  }
+}

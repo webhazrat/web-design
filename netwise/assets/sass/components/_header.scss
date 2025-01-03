@@ -1,0 +1,196 @@
+/**
+================================================
+04. Header CSS
+================================================
+**/
+
+.call-to-action {
+  color: var(--nt-font-color-body);
+  span {
+    font-size: 18px;
+    height: 55px;
+    width: 55px;
+    background: var(--nt-bg-white);
+    border-radius: 100%;
+    color: var(--nt-bg-primary);
+    transition: var(--nt-transition);
+  }
+  .call-to-action-info {
+    p {
+      font-family: var(--nt-font-title);
+    }
+    h5 {
+      font-size: var(--nt-font-size-body);
+      font-weight: 700;
+      color: var(--nt-font-color-title);
+      transition: var(--nt-transition);
+    }
+  }
+  &:hover {
+    span {
+      background: var(--nt-bg-primary);
+      color: var(--nt-bg-white);
+    }
+    .call-to-action-info {
+      h5 {
+        color: var(--nt-bg-primary);
+      }
+    }
+  }
+}
+
+.header-section {
+  position: fixed;
+  top: 20px;
+  z-index: 999;
+  width: 100%;
+  transition: var(--nt-transition);
+  &.sticky-menu {
+    background: var(--nt-bg-white);
+    top: 0;
+    animation: 400ms ease-in-out 0s normal none 1 running fadeInDown;
+    box-shadow: var(--nt-shadow-sm);
+    .navbar {
+      background: var(--nt-bg-white);
+      border-radius: 0;
+    }
+    .call-to-action {
+      span {
+        background: var(--nt-bg);
+      }
+    }
+  }
+  .navbar-brand img {
+    height: 58px;
+    width: auto;
+  }
+  .nav-item {
+    .nav-link {
+      font-family: var(--nt-font-title);
+      font-size: var(--nt-font-size-body);
+      color: var(--nt-font-color-body);
+      padding: 0;
+      font-weight: 500;
+      color: var(--nt-font-color-title);
+      &:hover {
+        color: var(--nt-bg-primary);
+      }
+      i {
+        font-size: 10px;
+      }
+    }
+    .dropdown-menu {
+      border: 0;
+      border-radius: 0;
+      li {
+        a {
+          background: transparent;
+          padding: 8px 16px;
+          transition: var(--nt-transition);
+          font-family: var(--nt-font-title);
+          font-size: var(--nt-font-size-body);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .navbar {
+    background-color: var(--nt-bg);
+    padding: 0 50px;
+    border-radius: 80px;
+    @media (max-width: 1399px) {
+      padding: 0 35px;
+    }
+    @media (max-width: 1199px) {
+      padding: 6px 30px;
+    }
+    .hamburger {
+      height: 40px;
+      width: 40px;
+      border: 1px solid var(--nt-bg-black);
+      border-radius: 100%;
+      background: transparent;
+      &:hover {
+        background: var(--nt-bg-primary);
+        color: var(--nt-bg-white);
+        border-color: var(--nt-bg-primary);
+      }
+    }
+    .navbar-nav {
+      gap: 25px;
+      @media (max-width: 1399px) {
+        gap: 20px;
+      }
+      .nav-item {
+        .nav-link {
+          line-height: 94px;
+        }
+        .dropdown-menu {
+          width: 220px;
+          top: 100%;
+          background-color: var(--nt-bg-white);
+          box-shadow: var(--nt-shadow);
+          display: block;
+          border-radius: 0;
+          transition: var(--nt-transition);
+          margin-top: 20px;
+          visibility: hidden;
+          opacity: 0;
+          li {
+            a {
+              &:hover {
+                background: var(--nt-bg-primary);
+                color: var(--nt-bg-white);
+              }
+            }
+          }
+        }
+        &:hover {
+          .dropdown-menu {
+            visibility: visible;
+            opacity: 1;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*Mobile navigation CSS start*/
+.mobile-navigation {
+  max-width: 300px;
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        i {
+          transition: var(--nt-transition);
+        }
+        i.transform {
+          transform: rotate(-180deg);
+        }
+      }
+      .dropdown-menu {
+        li {
+          a {
+            &:hover {
+              color: var(--nt-bg-primary);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .call-to-action {
+    margin-top: 30px;
+    span {
+      background: var(--nt-bg);
+    }
+  }
+}
